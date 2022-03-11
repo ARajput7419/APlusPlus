@@ -1,0 +1,18 @@
+FOR I = 2 I <= 100 I = I + 1
+{
+    T = I ^ 0.5
+    flag = TRUE
+    FOR J = 2   J <= T     J = J + 1
+    {
+        temp = I % J
+        CHECK temp == 0
+        {
+        flag = FALSE
+        BREAK
+        }
+    }
+    CHECK flag
+    {
+    PRINT I
+    }
+}
